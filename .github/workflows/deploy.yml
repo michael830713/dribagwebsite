@@ -82,9 +82,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          if [ "${{ steps.detect-package-manager.outputs.manager }}" = "npm" ] && [ "${{ steps.detect-package-manager.outputs.command }}" = "ci" ]; then
-            npm ci --legacy-peer-deps
-          elif [ "${{ steps.detect-package-manager.outputs.manager }}" = "npm" ]; then
+          if [ "${{ steps.detect-package-manager.outputs.manager }}" = "npm" ]; then
             npm install --legacy-peer-deps
           else
             ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
