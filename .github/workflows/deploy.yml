@@ -93,6 +93,11 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Fix image paths for GitHub Pages
+        run: |
+          mkdir -p out/dribagwebsite
+          cp -r out/images out/dribagwebsite/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
