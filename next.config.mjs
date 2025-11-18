@@ -7,8 +7,6 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: '/dribagwebsite',
-  assetPrefix: '/dribagwebsite',
   trailingSlash: true,
 }
 
